@@ -48,5 +48,10 @@
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-react": "^7.33.2",
     "husky": "^8.0.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint" 
+    }
   }
 }
