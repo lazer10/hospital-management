@@ -1,7 +1,7 @@
 import React from 'react';
 
 const App = () => {
-  const c = 0;
+  const cx = 0;
 
   return (
     <div className="app">
