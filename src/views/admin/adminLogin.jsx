@@ -7,7 +7,7 @@ import facebook from '../../assets/img/icons8-facebook-48.png';
 import apple from '../../assets/img/icons8-apple-50.png';
 
 const AdminLogin = () => (
-  <div className="Home-page">
+  <div className="home-page">
     <div className="background-cover">
       <div className="logo-container">
         <div className="logo">
@@ -99,7 +99,7 @@ const AdminLogin = () => (
       <a href="Contact Us.html">Contact Us</a>
     </div>
     <footer>
-      <div className="footers">
+      <div className="footer-img">
         <div className="logo-img">
           <img src={cartLogo} alt="Metronic" />
         </div>

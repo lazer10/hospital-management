@@ -1,66 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: montserrat, sans-serif;
-
-}
-
-.Home-page {
+.home-page {
     text-align: center;
     justify-content: center;
     position: relative;
-    padding-top: 20px;
-    background-color: #ffff;
-    height: 1000px;
+    padding-top: 1.25rem;
+    background-color: #FFF;
+    height: 62.5rem;
+    min-height: 100vh;
 }
-.footers {
+.footer-img {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-footer{
+
+footer {
     position: fixed;
     bottom: 0;
     width: 100%;
     
 }
-footer .footers .logo-img {
-    height: 250px;
-    width: 250px;
+
+footer .footer-img .logo-img {
+    height: 15.625rem;
+    width: 15.625rem;
 }
+
 .home-signup {
     display: flex;
     justify-content: center;
-    height: 750px;
+    height: 46.875rem;
     width: 40%;
-    margin: 20px 0 50px 410px;
-    box-shadow: 0 0 40px #dee1e6;
-    border-radius: 5px;
+    margin: 1.25rem auto 3.125rem auto;
+    box-shadow: 0 0 2.5rem #dee1e6;
+    border-radius: 0.313rem;
     background-color: #ffff;
 }
+
 .signin-title a {
     text-decoration: none;
-    padding-left: 5px;
+    padding-left: 0.313rem;
     color: #00a3ff;
 }
+
 .signin-title h3 {
     color: #616161;
-    padding-top: 10px;
+    padding-top: 0.625rem;
     
 }
+
 .about-us a {
     display: inline;
     justify-content: center;
     text-decoration: none;
     bottom: 0;
-    // padding-left: 10px;
-    margin-left: 15px;
+    margin-left: 0.938rem;
 }
+
 .about-us {
-    padding-left: 50px;
+    padding-left: 1.25rem;
 }
+
 .logo {
     display: flex;
     align-items: center;
@@ -70,122 +69,140 @@ footer .footers .logo-img {
 .logo-img {
     display: flex;
     position: relative;
-    height: 60px;
-    width: 60px;
-    padding-right: 10px;
+    height: 3.75rem;
+    width: 3.75rem;
+    padding-right: 0.625rem;
 }
+
 .logo-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 90px;
+    padding-left: 1.625rem;
 }
 
 .signin-title {
-    padding-left: 5px;
-    margin-top: 50px;
-    margin-bottom: 40px;
+    padding-left: 0.313rem;
+    margin-top: 3.125rem;
+    margin-bottom: 2.5rem;
 }
+
 .user-guide {
     align-items: center;
-    padding-top: 20px;
+    padding-top: 1.25rem;
     background-color: #f8f5ff;
-    width: 400px;
-    height: 90px;
-    margin-bottom: 30px;
+    width: 25rem;
+    height: 5.625rem;
+    margin-bottom: 1.875rem;
 }
+
 .credetials p {
     color: #7239ed;
     display: inline-block;
     word-wrap: normal;
     
 }
+
 .form-input {
-    margin-bottom: 15px;
+    margin-bottom: 0.938rem;
 }
+
 .form-group a {
     text-decoration: none;
 }
+
 .form-group label {
     text-align: start;
 }
+
 input, button {
     appearance: none;
     background: none;
     border: none;
     outline: none;
 }
+
 form .form-input .form-group {
     display: block;
-    width: 400px;
-    margin-bottom: 15px;
+    width: 25rem;
+    margin-bottom: 0.938rem;
 }
+
 .form-input .form-group label {
     display: block;
     align-items: flex-start;
-    color: black;
-    font-size: 15px;
-    margin-bottom: 5px;
+    color: #000000;
+    font-size: 0.938rem;
+    margin-bottom: 0.313rem;
     transition: 0.4s;
 }
+
 .form-input .form-group:focus-within label {
     color: #FE4880;
 }
+
 form .form-input .form-group input {
     display: block;
     width: 100%;
-    padding: 12px 17px;
+    padding: 0.75rem 1.063rem;
     background-color: #F8F8F8;
-    border-radius: 5px;
+    border-radius: 0.313rem;
     transition: 0.4s;
 }
+
 form .form-input .form-group input:focus {
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 0.188rem rgba(0, 0, 0, 0.2);
 }
+
 form .form-input input[type="submit"]{
     display: inline-block;
     background-color: #00a3ff;
-    width: 400px;
-    padding: 12px 17px;
-    border-radius: 5px;
+    width: 25rem;
+    padding: 0.75rem 1.063rem;
+    border-radius: 0.313rem;
     color: white;
-    margin-top: 15px;
+    margin-top: 0.938;
 }
+
 .others {
     display: inline;
     align-items: center;
     justify-content: center;
     
 }
+
 .separator p {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    font-size: 12px;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-size: 0.75rem;
 }
 
 .other-options .ggl {
     align-items: center;
-    width: 400px;
+    width: 25rem;
     background-color: #F8F8F8;
-    border-radius: 5px;
+    border-radius: 0.313rem;
     display: flex;
-    margin-bottom: 15px;
+    margin-bottom: 0.938rem;
     
 }
+
 .other-options .ggl a {
     display: inline-block;
-    padding: 12px 17px;
-    border-radius: 5px;
+    padding: 0.75rem 1.063rem;
+    border-radius: 0.313rem;
     text-decoration: none;
     color: #616161;
 }
+
 .others .other-options .logo-image {
-    padding-left: 80px;
+    padding-left: 5rem;
     
 }
+
 .others .other-options .logo-image img {
-    height: 20px;
-    width: 20px;
+    height: 1.25rem;
+    width: 1.25rem;
 }
 
     
