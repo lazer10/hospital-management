@@ -1,10 +1,11 @@
 import React from 'react';
 import metronicLogo from '../../assets/img/Metronic.png';
-import cartLogo from '../../assets/img/cartLogo.png';
-import dark from '../../assets/img/20-dark.png';
 import googleLogo from '../../assets/img/icons8-google-48.png';
 import facebook from '../../assets/img/icons8-facebook-48.png';
 import apple from '../../assets/img/icons8-apple-50.png';
+import LoginInputs from '../../components/loginInputs';
+import AboutAsFooter from '../../components/aboutAsFooter';
+import FooterImgs from '../../components/FooterImgs';
 
 const AdminLogin = () => (
   <div className="home-page">
@@ -44,26 +45,8 @@ const AdminLogin = () => (
           </div>
         </div>
         <form>
-          <div className="form-input">
-            <div className="form-group">
-              <label htmlFor="email">
-                Email
-                {' '}
-                {' '}
-              </label>
-              <input type="text" id="email" name="email" />
-            </div>
-            <div className="form-group">
-              <label htmlFor="password">
-                Password
-                {' '}
-                <a href="SignUp.html">Forgot Password ?</a>
-              </label>
-              <input type="password" id="password" name="password" />
-            </div>
-            <input type="submit" value="Continue" />
+          <LoginInputs />
 
-          </div>
           <div className="separator">
             <p>OR</p>
           </div>
@@ -93,20 +76,9 @@ const AdminLogin = () => (
       </div>
 
     </div>
-    <div className="about-us">
-      <a href="About.html">About</a>
-      <a href="Contact.html">Contact</a>
-      <a href="Contact Us.html">Contact Us</a>
-    </div>
+    <AboutAsFooter />
     <footer>
-      <div className="footer-img">
-        <div className="logo-img">
-          <img src={cartLogo} alt="Metronic" />
-        </div>
-        <div className="logo-img">
-          <img src={dark} alt="Metronic" />
-        </div>
-      </div>
+      <FooterImgs />
     </footer>
   </div>
 );
