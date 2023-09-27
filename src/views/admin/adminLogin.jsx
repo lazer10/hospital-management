@@ -1,11 +1,11 @@
 import React from 'react';
 import metronicLogo from '../../assets/img/Metronic.png';
-import googleLogo from '../../assets/img/icons8-google-48.png';
-import facebook from '../../assets/img/icons8-facebook-48.png';
-import apple from '../../assets/img/icons8-apple-50.png';
 import LoginInputs from '../../components/loginInputs';
-import AboutAsFooter from '../../components/aboutAsFooter';
+import AdminLoginFooter from '../../components/adminLoginFooter';
 import FooterImgs from '../../components/FooterImgs';
+import GoogleOption from '../../components/googleOption';
+import FacebookOption from '../../components/facebookOption';
+import AppleOption from '../../components/appleOption';
 
 const AdminLogin = () => (
   <div className="home-page">
@@ -52,31 +52,16 @@ const AdminLogin = () => (
           </div>
           <div className="others">
             <div className="other-options">
-              <div className="ggl">
-                <div className="logo-image">
-                  <img src={googleLogo} alt="Google" />
-                </div>
-                <a href="Contact Us.html">Continue with Google</a>
-              </div>
-              <div className="ggl">
-                <div className="logo-image">
-                  <img src={facebook} alt="Google" />
-                </div>
-                <a href="Contact Us.html">Continue with Facebook</a>
-              </div>
-              <div className="ggl">
-                <div className="logo-image">
-                  <img src={apple} alt="Google" />
-                </div>
-                <a href="Contact Us.html">Continue with Apple</a>
-              </div>
+              <GoogleOption />
+              <FacebookOption />
+              <AppleOption />
             </div>
           </div>
         </form>
       </div>
 
     </div>
-    <AboutAsFooter />
+    <AdminLoginFooter />
     <footer>
       <FooterImgs />
     </footer>

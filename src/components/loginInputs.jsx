@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-function loginInputs() {
+function LoginInputs () {
   return (
     <div>
       <div className="form-input">
@@ -24,7 +24,7 @@ function loginInputs() {
 
       </div>
     </div>
-  );
+  )
 }
 
-export default loginInputs;
+export default LoginInputs

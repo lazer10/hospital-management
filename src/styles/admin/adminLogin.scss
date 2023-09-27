@@ -60,6 +60,10 @@ footer .footer-img .logo-img {
     padding-left: 1.25rem;
 }
 
+.about-us a:hover {
+    cursor: pointer;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -164,6 +168,10 @@ form .form-input input[type="submit"]{
     margin-top: 0.938;
 }
 
+form .form-input input[type="submit"]:hover {
+    cursor: pointer;
+}
+
 .others {
     display: inline;
     align-items: center;
@@ -177,22 +185,26 @@ form .form-input input[type="submit"]{
     font-size: 0.75rem;
 }
 
-.other-options .ggl {
+.other-options .option-img {
     align-items: center;
     width: 25rem;
-    background-color: #F8F8F8;
+    background-color: #f8f8f8;
     border-radius: 0.313rem;
     display: flex;
     margin-bottom: 0.938rem;
     
 }
 
-.other-options .ggl a {
+.other-options .option-img a {
     display: inline-block;
     padding: 0.75rem 1.063rem;
     border-radius: 0.313rem;
     text-decoration: none;
     color: #616161;
+}
+
+.other-options .option-img a {
+    cursor: pointer;
 }
 
 .others .other-options .logo-image {
