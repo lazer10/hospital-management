@@ -216,3 +216,13 @@ form .form-input input[type="submit"]:hover {
     height: 1.25rem;
     width: 1.25rem;
 }
+
+.errorMessage {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1.063rem;
+    border-radius: 0.313rem;
+    transition: 0.4s;
+    background-color: #fcd8e2;
+    color: #932a43;
+}

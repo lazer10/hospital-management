@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
 import userSchema from '../validation/UserLoginValidation';
+import postRequest from './loginData';
 
 const LoginInputs = () => {
   const [state, setState] = useState({
@@ -24,7 +24,7 @@ const LoginInputs = () => {
 
       await userSchema.validate(formData, { abortEarly: false });
 
-      const response = await axios.post('http://localhost:3000/api/admin/login', formData);
+      const response = await postRequest('http://localhost:3000/api/admin/login', formData);
       localStorage.setItem('token', response.data.token);
 
       setMessage('');
@@ -36,17 +36,28 @@ const LoginInputs = () => {
         error.inner.forEach((err) => {
           validationErrors[err.path] = err.message;
         });
-        setMessage('Invalid input. Please check your data.');
+        setMessage('The login detail is incorrect');
       } else {
-        setMessage('Invalid login');
+        setMessage('Enter a valid Email or Password!');
       }
     }
   };
+
+  const handleInputChange = (e) => {
+    setMessage('');
+
+    setState({
+      ...state,
+      [e.target.name]: e.target.value,
+    });
+  };
   return (
     <div>
-      <div>
-        {message}
-      </div>
+      {message && (
+        <div className="errorMessage">
+          {message}
+        </div>
+      )}
       <div className="form-input">
         <div className="form-group">
           <label htmlFor="email">
@@ -58,7 +69,7 @@ const LoginInputs = () => {
             id="email"
             name="email"
             value={state.email}
-            onChange={(e) => setState({ ...state, email: e.target.value })}
+            onChange={handleInputChange}
           />
         </div>
         <div className="form-group">
@@ -72,7 +83,7 @@ const LoginInputs = () => {
             id="password"
             name="password"
             value={state.password}
-            onChange={(e) => setState({ ...state, password: e.target.value })}
+            onChange={handleInputChange}
           />
         </div>
         <input type="submit" value="Continue" onClick={loginHandler} />
