@@ -45,7 +45,8 @@ const AdminLogin = () => (
           </div>
         </div>
         <form>
-          <LoginInputs />
+
+          <LoginInputs submitUrl="https://hospital-management-api-2xuo.onrender.com/api/admin/login" />
 
           <div className="separator">
             <p>OR</p>

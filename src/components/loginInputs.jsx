@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
+import PropTypes from 'prop-types';
 import userSchema from '../validation/UserLoginValidation';
 import postRequest from './loginData';
 
-const LoginInputs = () => {
+const LoginInputs = ({
+  submitUrl,
+}) => {
   const [state, setState] = useState({
     email: '',
     password: '',
   });
-
   const [message, setMessage] = useState('');
 
   const navigate = useNavigate();
@@ -23,8 +25,8 @@ const LoginInputs = () => {
       };
 
       await userSchema.validate(formData, { abortEarly: false });
-
-      const response = await postRequest('http://localhost:3000/api/admin/login', formData);
+      if (!submitUrl) return;
+      const response = await postRequest(submitUrl, formData);
       localStorage.setItem('token', response.data.token);
 
       setMessage('');
@@ -36,9 +38,14 @@ const LoginInputs = () => {
         error.inner.forEach((err) => {
           validationErrors[err.path] = err.message;
         });
-        setMessage('The login detail is incorrect');
+        setMessage(error.inner.length ? error.inner[0].message : 'Validation error');
       } else {
-        setMessage('Enter a valid Email or Password!');
+        // eslint-disable-next-line no-lonely-if
+        if (error.response.data.status !== 500) {
+          setMessage(error.response.data.message);
+        } else {
+          setMessage('Something went wrong contact support');
+        }
       }
     }
   };
@@ -86,11 +93,16 @@ const LoginInputs = () => {
             onChange={handleInputChange}
           />
         </div>
-        <input type="submit" value="Continue" onClick={loginHandler} />
+
+        <button type="button" onClick={loginHandler}>Continue</button>
 
       </div>
     </div>
   );
+};
+
+LoginInputs.propTypes = {
+  submitUrl: PropTypes.string.isRequired,
 };
 
 export default LoginInputs;
